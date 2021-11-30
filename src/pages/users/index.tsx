@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Button, Icon, Table, Thead, Tr, Th, Checkbox, Tbody
 import { Sidebar } from "../../components/Sidebar";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import Pagination from "../../components/Pagination";
-
+import Link from 'next/link'
 
 
 export default function UserList() {
@@ -23,15 +23,16 @@ export default function UserList() {
                     <Flex mb="8" justify="space-between" align="center">
                         <Heading size="lg" fontWeight="normal">Usuários</Heading>
 
-                        <Button
-                            as="a"
-                            size="sm"
-                            fontSize="sm"
-                            colorScheme="pink"
-                            leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
-                            Criar novo
-                        </Button>
-
+                        <Link href="/users/create" passHref>
+                            <Button
+                                as="a"
+                                size="sm"
+                                fontSize="sm"
+                                colorScheme="pink"
+                                leftIcon={<Icon as={RiAddLine} fontSize="20" />}>
+                                Criar novo
+                            </Button>
+                        </Link>
                     </Flex>
 
                     <Table colorScheme="whiteAlpha" >
@@ -41,7 +42,7 @@ export default function UserList() {
                                     <Checkbox colorScheme="pink" />
                                 </Th>
                                 <Th>Usuário</Th>
-                                {isWideVerson && <Th>Data de Cadastro</Th> }
+                                {isWideVerson && <Th>Data de Cadastro</Th>}
                                 <Th width="8"></Th>
                             </Tr>
                         </Thead>
@@ -56,7 +57,7 @@ export default function UserList() {
                                         <Text fontSize="sm" color="gray.300">rickgomeslima@gmail.com</Text>
                                     </Box>
                                 </Td>
-                                {isWideVerson && <Td>29 de Novembro de 2021</Td> }
+                                {isWideVerson && <Td>29 de Novembro de 2021</Td>}
                                 <Td>
                                     <Button
                                         as="a"
@@ -64,7 +65,7 @@ export default function UserList() {
                                         fontSize="sm"
                                         colorScheme="purple"
                                         leftIcon={<Icon as={RiPencilLine} fontSize="16" />}>
-                                        { isWideVerson ? 'Editar' : ''}
+                                        {isWideVerson ? 'Editar' : ''}
                                     </Button>
                                 </Td>
                             </Tr>
