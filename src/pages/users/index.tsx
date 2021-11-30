@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { Box, Flex, Heading, Button, Icon, Table, Thead, Tr, Th, Checkbox, Tbody, Td, Text } from '@chakra-ui/react'
-import { Sidebar } from "../../components/Sindebar";
+import { Sidebar } from "../../components/Sidebar";
 import { RiAddLine, RiPencilLine } from "react-icons/ri";
 import Pagination from "../../components/Pagination";
 
